@@ -55,7 +55,6 @@ fn main() {
             println!("Enter the folder path");
             let mut folder_path = String::new();
             io::stdin().read_line(&mut folder_path).unwrap();
-            if folder_path
             let new_path = format!("{}/{}", folder_path, file_path);
             match fs::rename(file_path, &new_path) {
                 Ok(_) => println!("Moved file to {}", new_path),
